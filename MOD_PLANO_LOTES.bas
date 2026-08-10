@@ -15,6 +15,10 @@ Private Const EPSILON As Double = 0.000001
 ' Retorna uma matriz com:
 ' material | lote origem | lote destino | quantidade | linha origem | linha destino
 ' Retorna Empty quando nao ha movimentos necessarios.
+Public Sub GerarPreviaBatimentoInventario()
+    GerarPreviaBatimentoINV ws_base
+End Sub
+
 Public Function PlanejarBatimentoINV(ByVal wsBase As Worksheet) As Variant
     Dim ultimaLinha As Long
     Dim dados As Variant
