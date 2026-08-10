@@ -44,6 +44,7 @@ Private Sub GerarPreviaStatus(ByVal bloquear As Boolean)
     Next i
 
     ws_base.Range("AJ6:AO" & ws_base.Cells(ws_base.Rows.Count, "AJ").End(xlUp).Row).ClearContents
+    ws_base.Range("AI4").Value = IIf(bloquear, "BLOQUEIO", "DESBLOQUEIO")
     ws_base.Range("AJ5:AO5").Value = CabecalhoStatus()
     If total = 0 Then
         MsgBox "Nao ha movimentos de status a gerar.", vbInformation
