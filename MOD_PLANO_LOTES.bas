@@ -95,6 +95,7 @@ Public Sub GerarPreviaBatimentoINV(ByVal wsBase As Worksheet)
     ultimaLinhaSaida = wsBase.Cells(wsBase.Rows.Count, "AJ").End(xlUp).Row
     If ultimaLinhaSaida < PRIMEIRA_LINHA_DADOS Then ultimaLinhaSaida = PRIMEIRA_LINHA_DADOS
     wsBase.Range("AJ" & PRIMEIRA_LINHA_DADOS & ":AO" & ultimaLinhaSaida).ClearContents
+    wsBase.Range("AI4").Value = "INVENTARIO"
     wsBase.Range("AJ5").Resize(1, 6).Value = CabecalhoPrevia()
 
     If IsEmpty(plano) Then
