@@ -14,6 +14,7 @@ Public Sub GerarPreviaBatimentoDiario()
     ultimaSaida = ws_base.Cells(ws_base.Rows.Count, "AJ").End(xlUp).Row
     If ultimaSaida < PRIMEIRA_LINHA_DIARIO Then ultimaSaida = PRIMEIRA_LINHA_DIARIO
     ws_base.Range("AJ" & PRIMEIRA_LINHA_DIARIO & ":AO" & ultimaSaida).ClearContents
+    ws_base.Range("AI4").Value = "DIARIO"
     ws_base.Range("AJ5").Resize(1, 6).Value = CabecalhoDiario()
 
     If IsEmpty(plano) Then
